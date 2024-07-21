@@ -65,8 +65,12 @@ def chat_with_gpt(prompt):
     
     return response
 
-if __name__ == "__main__":
+def main():
     user_input = " ".join(sys.argv[1:]) if len(sys.argv) > 1 else input("Please provide a prompt: ")
     response = chat_with_gpt(user_input)
     # add syntax highlighting before printing out the response
     print(highlight_code(response.choices[0].message.content))
+
+
+if __name__ == "__main__":
+    main()

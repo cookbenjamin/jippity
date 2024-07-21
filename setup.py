@@ -4,11 +4,12 @@ setup(
     name='jippity',
     version='0.1',    
     description='a simple cli wrapper around chat gpt',
-    url='https://github.com/cookbenjamin/your-package-name',
+    url='https://github.com/cookbenjamin/jippity',
     author='Benjamin Cook',
     author_email='cookbenjamin@gmail.com',
     license='MIT Licence',
-    packages=find_packages(),
+    package_dir={'': 'src'},  # Define the directory where your packages are
+    packages=find_packages(where='src'),
     install_requires=['openai==1.30.1',
                       'pygments==2.18.0',],
     entry_points={
